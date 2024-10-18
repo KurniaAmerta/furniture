@@ -18,6 +18,7 @@
     </div>
 
     @include('layouts.footer')
+    <script src="{{ URL::asset('js/accordion.js') }}"></script>
 </body>
 
 </html>
