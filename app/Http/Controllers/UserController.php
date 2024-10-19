@@ -42,8 +42,8 @@ class UserController extends Controller
         $this->validate($request, [
             // 'full_name' => 'required|string|max:255',
             'name' => 'required|string|max:255',
-            'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'phone_number' => 'required|string|max:15|unique:users',
+            // 'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            // 'phone_number' => 'required|string|max:15|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
@@ -51,8 +51,8 @@ class UserController extends Controller
         $user = User::create([
             // 'full_name' => $request->full_name,
             'name' => $request->name,
-            'avatar' => $request->file('avatar') ? $request->file('avatar')->store('avatars') : null,
-            'phone_number' => $request->phone_number,
+            // 'avatar' => $request->file('avatar') ? $request->file('avatar')->store('avatars') : null,
+            // 'phone_number' => $request->phone_number,
             'email' => $request->email,
             'email_verified_at' => false,
             'password' => Hash::make($request->password),

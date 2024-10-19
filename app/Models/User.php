@@ -28,8 +28,8 @@ class User extends Authenticatable
         // 'password',
 
         'name',
-        'avatar',
-        'phone_number',
+        // 'avatar',
+        // 'phone_number',
         'email',
         'email_verified_at',
         'password',
