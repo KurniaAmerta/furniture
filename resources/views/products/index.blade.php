@@ -52,7 +52,7 @@
                         </div>
                         <div class="flex flex-wrap gap-8 mb-10">
                             @foreach ($colors as $item)
-                                <a href="#" class="inline-block rounded-md bg-{{ $item->hex }} w-6 h-6"></a>
+                                <a href="#" class="inline-block rounded-md w-6 h-6 border" style="background-color: {{ $item->hex }};"></a>
                             @endforeach
                         </div>
                         <div class="flex justify-between items-center flex-wrap gap-2 mb-6">
@@ -91,26 +91,39 @@
                             <div class="w-full lg:w-1/2 p-4">
                                 <a href="#" class="group">
                                     <div class="relative overflow-hidden mb-4" style="height:400px;">
+                                        @php
+                                            $photo = $item->photos->first();
+                                        @endphp
                                         <img class="object-cover w-full h-full transform group-hover:scale-105 transition duration-200"
-                                            src="{{ asset('img/furnitures/table.jpg') }}" alt="">
+                                            src="{{ $photo ? asset('storage/' . $photo->directory) : asset('images/default-product.jpg') }}" alt="">
                                     </div>
                                 </a>
                                 <div class="flex flex-wrap justify-between gap-4 mb-2">
                                     <h2 class="font-heading text-3xl">{{ $item->name }}</h2>
-                                    <div>
-                                        <p class="text-gray-500 text-sm font-semibold">Sale
-                                            {{ $item->discount_type == 'percentage' ? $item->discount . '%' : 'Rp' . number_format($item->discount, 0, ',', '.') . ',00' }}
-                                        </p>
-                                    </div>
+                                    @if ($item->discount > 0)
+                                        <div>
+                                            <p class="text-gray-500 text-sm font-semibold">Sale
+                                                {{ $item->discount_type == 'percentage' ? $item->discount . '%' : 'Rp' . number_format($item->discount, 0, ',', '.') . ',00' }}
+                                            </p>
+                                        </div>
+                                    @endif
                                 </div>
                                 <div class="flex flex-wrap justify-between">
                                     <div>
-                                        <p class="text-red-700 text-2xl font-semibold mb-1">
-                                            Rp{{ number_format($item->price_after_discount(), 0, ',', '.') }},00
-                                        </p>
-                                        <p class="text-gray-500 text-sm line-through mb-2">
-                                            Rp{{ number_format($item->price, 0, ',', '.') }},00
-                                        </p>
+                                        @if ($item->discount > 0)
+                                            <p class="text-red-700 text-2xl font-semibold mb-1">
+                                                Rp{{ number_format($item->price_after_discount(), 0, ',', '.') }},00
+                                            </p>
+                                        @else
+                                            <p class="text-red-700 text-2xl font-semibold mb-1">
+                                                Rp{{ number_format($item->price, 0, ',', '.') }},00
+                                            </p>
+                                        @endif
+                                        @if ($item->discount > 0)
+                                            <p class="text-gray-500 text-sm line-through mb-2">
+                                                Rp{{ number_format($item->price, 0, ',', '.') }},00
+                                            </p>
+                                        @endif
                                         <p class="text-gray-500 text-sm font-semibold">Remaining {{ $item->stock }}</p>
                                     </div>
                                     <div>

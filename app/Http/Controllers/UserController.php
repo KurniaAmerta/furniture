@@ -24,7 +24,7 @@ class UserController extends Controller
         ]);
 
         if (auth()->attempt($credentials)) {
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         }
 
         return back()->withErrors([

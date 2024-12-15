@@ -15,7 +15,7 @@
                 <div class="mb-10 accordion-item">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer" onclick="toggleAccordion(this)">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">Is there a free trial available?</h6>
+                            <h6 class="text-3xl font-heading">How do I know if the furniture will fit in my space?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span class="icon-closed">
@@ -35,15 +35,13 @@
                         </div>
                     </div>
                     <div class="overflow-hidden duration-500 accordion-content max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                        you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                        up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Most online furniture stores provide detailed product dimensions and a visual guide to help you assess the size. You can also use online room planners or tools provided by the store to visualize how the furniture will fit into your room.</p>
                     </div>
                 </div>
                 <div class="mb-10 accordion-item">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer" onclick="toggleAccordion(this)">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">Can I change my plan later?</h6>
+                            <h6 class="text-3xl font-heading">Can I return the furniture?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span class="icon-closed">
@@ -63,15 +61,13 @@
                         </div>
                     </div>
                     <div class="overflow-hidden duration-500 accordion-content max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                        you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                        up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Many e-commerce furniture stores offer return policies, but it's essential to check the specific store's return policy before purchasing. Typically, furniture must be returned within a set time frame in its original condition and packaging. Some stores may charge restocking fees.</p>
                     </div>
                 </div>
                 <div class="mb-10 accordion-item">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer" onclick="toggleAccordion(this)">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">What is your cancellation policy?</h6>
+                            <h6 class="text-3xl font-heading">Is the furniture easy to assemble when it arrives?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span class="icon-closed">
@@ -91,15 +87,13 @@
                         </div>
                     </div>
                     <div class="overflow-hidden duration-500 accordion-content max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                        you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                        up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">It depends on the piece. Most e-commerce furniture comes with clear instructions and the necessary tools for assembly. For larger or more complex pieces, some stores offer professional assembly services for an additional fee.</p>
                     </div>
                 </div>
                 <div class="mb-10 accordion-item">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer" onclick="toggleAccordion(this)">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">Can other info be added to an invoice?</h6>
+                            <h6 class="text-3xl font-heading">How do I know the quality of the furniture?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span class="icon-closed">
@@ -119,15 +113,13 @@
                         </div>
                     </div>
                     <div class="overflow-hidden duration-500 accordion-content max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                            you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                            up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">To assess quality, read customer reviews and ratings, check for material descriptions, and look for certifications (like FSC for sustainable wood). Many websites also provide close-up photos to give a better understanding of the materials and craftsmanship.</p>
                     </div>
                 </div>
                 <div class="mb-10 accordion-item">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer" onclick="toggleAccordion(this)">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">How does billing work?</h6>
+                            <h6 class="text-3xl font-heading">What shipping options are available for furniture?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span class="icon-closed">
@@ -147,15 +139,13 @@
                         </div>
                     </div>
                     <div class="overflow-hidden duration-500 accordion-content max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days.
-                        If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get
-                        you up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Shipping options vary depending on the store. Some e-commerce furniture stores offer free shipping, while others charge a fee based on your location. You may also have the option for expedited shipping or white-glove delivery, where the furniture is delivered and assembled in your home.</p>
                     </div>
                 </div>
                 <div class="mb-10 accordion-item">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer" onclick="toggleAccordion(this)">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">How do I change my account email?</h6>
+                            <h6 class="text-3xl font-heading">Can I customize the furniture, such as color?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span class="icon-closed">
@@ -175,9 +165,7 @@
                         </div>
                     </div>
                     <div class="overflow-hidden duration-500 accordion-content max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days.
-                            If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get
-                            you up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Many e-commerce furniture stores offer customization options, allowing you to select different colors, fabrics, or finishes. Be sure to check the product description to see if customization is available, as this may impact delivery times.</p>
                     </div>
                 </div>
             </div>
@@ -185,7 +173,7 @@
                 <div x-data="{ accordion: false }" x-on:click="accordion = !accordion" class="mb-10">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">Is there a free trial available?</h6>
+                            <h6 class="text-3xl font-heading">How do I know if the furniture will fit in my space?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span x-show="accordion === false">
@@ -209,15 +197,13 @@
                     <div x-ref="container"
                         :style="accordion ? 'max-height: ' + $refs.container.scrollHeight + 'px' : ''"
                         class="overflow-hidden duration-500 max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                            you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                            up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Most online furniture stores provide detailed product dimensions and a visual guide to help you assess the size. You can also use online room planners or tools provided by the store to visualize how the furniture will fit into your room.</p>
                     </div>
                 </div>
                 <div x-data="{ accordion: false }" x-on:click="accordion = !accordion" class="mb-10">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">Can I change my plan later?</h6>
+                            <h6 class="text-3xl font-heading">Can I return the furniture?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span x-show="accordion === false">
@@ -241,15 +227,13 @@
                     <div x-ref="container"
                         :style="accordion ? 'max-height: ' + $refs.container.scrollHeight + 'px' : ''"
                         class="overflow-hidden duration-500 max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                            you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                            up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Many e-commerce furniture stores offer return policies, but it's essential to check the specific store's return policy before purchasing. Typically, furniture must be returned within a set time frame in its original condition and packaging. Some stores may charge restocking fees.</p>
                     </div>
                 </div>
                 <div x-data="{ accordion: false }" x-on:click="accordion = !accordion" class="mb-10">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">What is your cancellation policy?</h6>
+                            <h6 class="text-3xl font-heading">Is the furniture easy to assemble when it arrives?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span x-show="accordion === false">
@@ -273,15 +257,13 @@
                     <div x-ref="container"
                         :style="accordion ? 'max-height: ' + $refs.container.scrollHeight + 'px' : ''"
                         class="overflow-hidden duration-500 max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days. If
-                            you want, we’ll provide you with a free, personalized 30-minute onboarding call to get you
-                            up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">It depends on the piece. Most e-commerce furniture comes with clear instructions and the necessary tools for assembly. For larger or more complex pieces, some stores offer professional assembly services for an additional fee.</p>
                     </div>
                 </div>
                 <div x-data="{ accordion: false }" x-on:click="accordion = !accordion" class="mb-10">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">Can other info be added to an invoice?</h6>
+                            <h6 class="text-3xl font-heading">How do I know the quality of the furniture?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span x-show="accordion === false">
@@ -305,15 +287,13 @@
                     <div x-ref="container"
                         :style="accordion ? 'max-height: ' + $refs.container.scrollHeight + 'px' : ''"
                         class="overflow-hidden duration-500 max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days.
-                        If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get
-                        you up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">To assess quality, read customer reviews and ratings, check for material descriptions, and look for certifications (like FSC for sustainable wood). Many websites also provide close-up photos to give a better understanding of the materials and craftsmanship.</p>
                     </div>
                 </div>
                 <div x-data="{ accordion: false }" x-on:click="accordion = !accordion" class="mb-10">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">How does billing work?</h6>
+                            <h6 class="text-3xl font-heading">What shipping options are available for furniture?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span x-show="accordion === false">
@@ -337,15 +317,13 @@
                     <div x-ref="container"
                         :style="accordion ? 'max-height: ' + $refs.container.scrollHeight + 'px' : ''"
                         class="overflow-hidden duration-500 max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days.
-                            If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get
-                            you up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Shipping options vary depending on the store. Some e-commerce furniture stores offer free shipping, while others charge a fee based on your location. You may also have the option for expedited shipping or white-glove delivery, where the furniture is delivered and assembled in your home.</p>
                     </div>
                 </div>
                 <div x-data="{ accordion: false }" x-on:click="accordion = !accordion" class="mb-10">
                     <div class="flex flex-wrap items-center justify-between -m-2 cursor-pointer">
                         <div class="w-auto p-2">
-                            <h6 class="text-3xl font-heading">How do I change my account email?</h6>
+                            <h6 class="text-3xl font-heading">Can I customize the furniture, such as color?</h6>
                         </div>
                         <div class="w-auto p-2">
                             <span x-show="accordion === false">
@@ -369,9 +347,7 @@
                     <div x-ref="container"
                         :style="accordion ? 'max-height: ' + $refs.container.scrollHeight + 'px' : ''"
                         class="overflow-hidden duration-500 max-h-0">
-                        <p class="mt-2 text-lg font-semibold text-gray-500">Yes, you can try us for free for 30 days.
-                        If you want, we’ll provide you with a free, personalized 30-minute onboarding call to get
-                        you up and running as soon as possible.</p>
+                        <p class="mt-2 text-lg font-semibold text-gray-500">Many e-commerce furniture stores offer customization options, allowing you to select different colors, fabrics, or finishes. Be sure to check the product description to see if customization is available, as this may impact delivery times.</p>
                     </div>
                 </div>
             </div> --}}
@@ -439,11 +415,6 @@
                             <a href="#"
                                 class="text-3xl text-gray-500 uppercase transition duration-200 font-heading hover:text-gray-900">Browse
                                 Categories</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="text-3xl text-gray-500 uppercase transition duration-200 font-heading hover:text-gray-900">Our
-                                Story</a>
                         </li>
                         <li>
                             <a href="#"
