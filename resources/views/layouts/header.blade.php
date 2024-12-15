@@ -1,31 +1,31 @@
 @if (session('success'))
-    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4" role="alert">
+    <div class="relative px-4 py-3 mt-4 text-green-700 bg-green-100 border border-green-400 rounded" role="alert">
         <strong class="font-bold">Success!</strong>
         <span class="block sm:inline">{{ session('success') }}</span>
     </div>
 @endif
 <section x-data="{ mobileNavOpen: false }">
-    <nav class="relative bg-white py-3 shadow-lg">
-        <div class="container mx-auto px-4">
+    <nav class="relative py-3 bg-white shadow-lg">
+        <div class="container px-4 mx-auto">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
                     <a href="#" class="inline-block mr-10">
                         <img class="h-18" src="shopky-assets/logos/shopky-logo.svg" alt="">
                     </a>
-                    <ul class="hidden lg:flex items-center gap-10">
+                    <ul class="items-center hidden gap-10 lg:flex">
                         <li>
                             <a href="{{ route('home') }}"
-                                class="text-black text-sm font-medium hover:text-opacity-80 transition duration-200">Home</a>
+                                class="text-sm font-medium text-black transition duration-200 hover:text-opacity-80">Home</a>
                         </li>
                         <li>
                             <a href="{{ route('products') }}"
-                                class="text-black text-sm font-medium hover:text-opacity-80 transition duration-200">Product</a>
+                                class="text-sm font-medium text-black transition duration-200 hover:text-opacity-80">Product</a>
                         </li>
                     </ul>
                 </div>
-                <div class="hidden lg:flex gap-6">
+                <div class="hidden gap-6 lg:flex">
                     <div
-                        class="border border-gray-200 rounded-full py-3 px-4 flex items-center gap-2 focus-within:ring focus-within:ring-gray-100 transition duration-200">
+                        class="flex items-center gap-2 px-4 py-3 transition duration-200 border border-gray-200 rounded-full focus-within:ring focus-within:ring-gray-100">
                         <a href="#" class="inline-block h-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                                 fill="none">
@@ -41,7 +41,7 @@
                         <input type="text" class="flex-1 outline-none" placeholder="Search Product">
                     </div>
                     <a href="{{ route('carts') }}"
-                        class="rounded-full bg-white border border-gray-200 p-3 flex items-center justify-between h-12 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition duration-200">
+                        class="flex items-center justify-between h-12 p-3 transition duration-200 bg-white border border-gray-200 rounded-full hover:bg-gray-50 focus:ring-4 focus:ring-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                             fill="none">
                             <path
@@ -49,8 +49,8 @@
                                 fill="black"></path>
                         </svg>
                     </a>
-                    <a href="{{ route('orders') }}"
-                        class="rounded-full bg-gray-900 p-3 flex items-center justify-between h-12 hover:bg-gray-800 focus:ring-4 focus:ring-gray-200 transition duration-200">
+                    <a href="{{ route('login') }}"
+                        class="flex items-center justify-between h-12 p-3 transition duration-200 bg-gray-900 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                             fill="none">
                             <path
@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <button x-on:click="mobileNavOpen = !mobileNavOpen" class="lg:hidden">
-                    <svg class="navbar-burger text-black" width="51" height="51" viewbox="0 0 56 56"
+                    <svg class="text-black navbar-burger" width="51" height="51" viewbox="0 0 56 56"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="56" height="56" rx="28" fill="currentColor"></rect>
                         <path d="M37 32H19M37 24H19" stroke="white" stroke-width="1.5" stroke-linecap="round"
@@ -70,10 +70,10 @@
             </div>
         </div>
     </nav>
-    <div x-show="mobileNavOpen" class="navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50 hidden">
-        <div x-on:click="mobileNavOpen = !mobileNavOpen" class="navbar-menu fixed inset-0 bg-black opacity-20 hidden">
+    <div x-show="mobileNavOpen" class="fixed top-0 bottom-0 left-0 z-50 hidden w-5/6 max-w-xs navbar-menu">
+        <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 hidden bg-black navbar-menu opacity-20">
         </div>
-        <nav class="relative p-8 w-full h-full bg-white overflow-y-auto">
+        <nav class="relative w-full h-full p-8 overflow-y-auto bg-white">
             <div class="flex items-center justify-between">
                 <a href="#" class="inline-block">
                     <img class="h-18" src="shopky-assets/logos/shopky-logo.svg" alt="">
@@ -96,7 +96,7 @@
             </ul>
             <div class="flex flex-col gap-10">
                 <div
-                    class="border border-gray-200 rounded-full py-3 px-4 flex items-center gap-2 w-full focus-within:ring focus-within:ring-gray-100 transition duration-200">
+                    class="flex items-center w-full gap-2 px-4 py-3 transition duration-200 border border-gray-200 rounded-full focus-within:ring focus-within:ring-gray-100">
                     <a href="#" class="inline-block h-6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                             fill="none">
@@ -110,9 +110,9 @@
                     </a>
                     <input type="text" class="flex-1 outline-none" placeholder="Search Product">
                 </div>
-                <div class="flex gap-4 flex-wrap">
+                <div class="flex flex-wrap gap-4">
                     <a href="{{ route('carts') }}"
-                        class="rounded-full bg-white border border-gray-200 p-3 flex items-center justify-between h-12 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition duration-200">
+                        class="flex items-center justify-between h-12 p-3 transition duration-200 bg-white border border-gray-200 rounded-full hover:bg-gray-50 focus:ring-4 focus:ring-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                             fill="none">
                             <path
@@ -120,8 +120,8 @@
                                 fill="black"></path>
                         </svg>
                     </a>
-                    <a href="{{ route('orders') }}"
-                        class="rounded-full bg-gray-900 p-3 flex items-center justify-between h-12 hover:bg-gray-800 focus:ring-4 focus:ring-gray-200 transition duration-200">
+                    <a href="{{ route('login') }}"
+                        class="flex items-center justify-between h-12 p-3 transition duration-200 bg-gray-900 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                             fill="none">
                             <path
