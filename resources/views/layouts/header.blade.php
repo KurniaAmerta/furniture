@@ -15,11 +15,11 @@
                     <ul class="items-center hidden gap-10 lg:flex">
                         <li>
                             <a href="{{ route('home') }}"
-                                class="text-sm font-medium text-black transition duration-200 hover:text-opacity-80">Home</a>
+                                class="text-sm font-medium text-black transition duration-200 hover:text-opacity-80">Beranda</a>
                         </li>
                         <li>
                             <a href="{{ route('products') }}"
-                                class="text-sm font-medium text-black transition duration-200 hover:text-opacity-80">Product</a>
+                                class="text-sm font-medium text-black transition duration-200 hover:text-opacity-80">Produk</a>
                         </li>
                     </ul>
                 </div>
@@ -38,7 +38,7 @@
                                 </path>
                             </svg>
                         </a>
-                        <input type="text" class="flex-1 outline-none" placeholder="Search Product">
+                        <input type="text" class="flex-1 outline-none" placeholder="Cari Produk">
                     </div>
                     <a href="{{ route('carts') }}"
                         class="flex items-center justify-between h-12 p-3 transition duration-200 bg-white border border-gray-200 rounded-full hover:bg-gray-50 focus:ring-4 focus:ring-gray-200">
@@ -98,10 +98,10 @@
             </div>
             <ul class="flex flex-col gap-12 py-12">
                 <li>
-                    <a href="{{ route('home') }}" class="text-sm font-medium">Home</a>
+                    <a href="{{ route('home') }}" class="text-sm font-medium">Beranda</a>
                 </li>
                 <li>
-                    <a href="{{ route('products') }}" class="text-sm font-medium">Product</a>
+                    <a href="{{ route('products') }}" class="text-sm font-medium">Produk</a>
                 </li>
             </ul>
             <div class="flex flex-col gap-10">
@@ -118,7 +118,7 @@
                                 stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                     </a>
-                    <input type="text" class="flex-1 outline-none" placeholder="Search Product">
+                    <input type="text" class="flex-1 outline-none" placeholder="Cari Produk">
                 </div>
                 <div class="flex flex-wrap gap-4">
                     <a href="{{ route('carts') }}"
