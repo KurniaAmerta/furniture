@@ -19,15 +19,14 @@
                 <div class="w-full md:w-1/2 p-4">
                     <div class="p-8 flex flex-col justify-between h-full border border-gray-100 rounded-2xl">
                         <div class="w-full mb-16">
-                            <h3 class="mb-4 font-heading text-6xl text-gray-900">Upgrade Your Style with Our Exclusive
+                            <h3 class="mb-4 font-heading text-6xl text-gray-900">Upgrade Gaya Anda dengan Koleksi Eksklusif Kami
                                 Designs</h3>
-                            <p class="text-lg text-gray-900 font-semibold">Explore Fashion Trends from Runway to Street
+                            <p class="text-lg text-gray-900 font-semibold">Jelajahi Tren Fashion dari Panggung Mode hingga Gaya Jalanan
                                 Style</p>
                         </div>
                         <div class="w-full">
                             <a href="{{ route('products') }}"
-                                class="bg-green-900 rounded-full hover:bg-green-800 focus:ring-4 focus:ring-gray-200 text-sm text-white font-semibold px-8 h-12 inline-flex items-center transition duration-200">Explore
-                                Our Collection</a>
+                                class="bg-green-900 rounded-full hover:bg-green-800 focus:ring-4 focus:ring-gray-200 text-sm text-white font-semibold px-8 h-12 inline-flex items-center transition duration-200">Jelajahi Koleksi Kami</a>
                         </div>
                     </div>
                 </div>
@@ -37,13 +36,11 @@
             <div class="flex flex-wrap -m-4">
                 <div class="w-full lg:w-7/12 p-4">
                     <div class="rounded-2xl border border-gray-200 p-8 mb-4">
-                        <h2 class="font-heading text-6xl md:text-8xl uppercase mb-20 max-w-2xl">Fashionable
-                            Finds for Every Occasion</h2>
-                        <p class="text-gray-500 text-lg font-semibold mb-6 max-w-lg">Discover a Wide Range
-                            of Fashion Options, Including Clothing, Shoes, Accessories, and More</p>
+                        <h2 class="font-heading text-6xl md:text-8xl uppercase mb-20 max-w-2xl">Temukan Gaya Modis untuk Setiap Kesempatan</h2>
+                        <p class="text-gray-500 text-lg font-semibold mb-6 max-w-lg">Temukan Beragam Pilihan Fashion, Termasuk Pakaian, Sepatu, Aksesori, dan Lainnya</p>
                         <a href="#"
                             class="inline-flex items-center gap-2 bg-gray-900 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-200 text-white text-sm font-semibold px-8 h-12 transition duration-200">
-                            <span>Shop Now</span>
+                            <span>Belanja Sekarang</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
                                 fill="none">
                                 <path
@@ -60,8 +57,8 @@
                                         src="https://images.unsplash.com/photo-1603376728541-6e1906a300e6?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjQ0NjY5OTZ8&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
                                         alt="">
                                     <div class="absolute top-4 left-4">
-                                        <p class="font-semibold text-gray-500 max-w-xs">15 Product -
-                                            Available</p>
+                                        <p class="font-semibold text-gray-500 max-w-xs">15 Produk -
+                                            Tersedia</p>
                                     </div>
                                 </div>
                             </a>
@@ -73,8 +70,8 @@
                                         src="https://images.unsplash.com/photo-1506898667547-42e22a46e125?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjQ0NjY5OTZ8&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
                                         alt="">
                                     <div class="absolute top-4 left-4">
-                                        <p class="font-semibold text-gray-500 max-w-xs">15 Product -
-                                            Available</p>
+                                        <p class="font-semibold text-gray-500 max-w-xs">15 Produk -
+                                            Tersedia</p>
                                     </div>
                                 </div>
                             </a>
@@ -89,16 +86,13 @@
                                 alt="">
                             <div class="absolute bottom-8 left-8 right-8">
                                 <div class="bg-white rounded-2xl p-6">
-                                    <h2 class="font-heading text-5xl md:text-7xl mb-2 max-w-md md:max-w-lg">
-                                        Style and Fashion Inspiration"</h2>
-                                    <p class="text-gray-500 text-lg font-semibold max-w-md">Explore the
-                                        Latest Styles from Top Designers and Brands, Handpicked by Our
-                                        Fashion Experts</p>
+                                    <h2 class="font-heading text-5xl md:text-7xl mb-2 max-w-md md:max-w-lg">Inspirasi Gaya dan Fashion"</h2>
+                                    <p class="text-gray-500 text-lg font-semibold max-w-md">Jelajahi Gaya Terbaru dari Desainer dan Merek Ternama, Dipilih Secara Khusus oleh Ahli Fashion Kami</p>
                                 </div>
                             </div>
                             <div class="absolute top-4 right-4">
-                                <p class="text-2xl font-semibold text-white max-w-xs">15 Product -
-                                    Available</p>
+                                <p class="text-2xl font-semibold text-white max-w-xs">15 Produk -
+                                    Tersedia</p>
                             </div>
                         </div>
                     </a>
