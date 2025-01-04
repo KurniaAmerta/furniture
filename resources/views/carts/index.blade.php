@@ -7,7 +7,7 @@
         <div class="flex flex-wrap gap-2 mb-4">
             <a href="{{ route('carts') }}" class="group">
                 <div class="flex flex-wrap items-center">
-                    <span class="font-semibold text-xs group-hover:text-gray-900 transition duration-200">Cart</span>
+                    <span class="font-semibold text-xs group-hover:text-gray-900 transition duration-200">Keranjang</span>
                     <div class="text-gray-500 group-hover:text-gray-900 transition duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                             fill="none">
@@ -33,7 +33,7 @@
             </a>
             <a href="{{ route('payment') }}" class="group">
                 <div class="flex flex-wrap items-center">
-                    <span class="text-xs text-gray-500 group-hover:text-gray-900 transition duration-200">Payment</span>
+                    <span class="text-xs text-gray-500 group-hover:text-gray-900 transition duration-200">Pembayaran</span>
                     <div class="text-gray-500 group-hover:text-gray-900 transition duration-200">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                             fill="none">
@@ -45,7 +45,7 @@
                 </div>
             </a>
         </div>
-        <h1 class="font-heading uppercase text-5xl mb-10">Shopping Cart</h1>
+        <h1 class="font-heading uppercase text-5xl mb-10">Keranjang Belanja</h1>
         <div class="flex flex-wrap items-center -m-4">
             <div class="w-full lg:w-1/2 xl:w-2/3 p-4">
                 <div class="overflow-hidden">
@@ -55,15 +55,15 @@
                                 <tr>
                                     <th class="whitespace-nowrap pb-4 border-b border-gray-200 text-left">
                                         <label class="relative flex items-center gap-2">
-                                            <span class="font-heading uppercase text-3xl font-normal">PRODUCT</span>
+                                            <span class="font-heading uppercase text-3xl font-normal">PRODUK</span>
                                         </label>
                                     </th>
                                     <th
                                         class="whitespace-nowrap pb-4 border-b border-gray-200 text-center font-heading uppercase text-3xl font-normal">
-                                        QUANTITY</th>
+                                        Kuantitas</th>
                                     <th
                                         class="whitespace-nowrap pb-4 border-b border-gray-200 text-right font-heading uppercase text-3xl font-normal">
-                                        PRICE</th>
+                                        Harga</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -147,9 +147,9 @@
             </div>
             <div class="w-full lg:w-1/2 xl:w-1/3 p-4">
                 <div class="border border-gray-200 rounded-2xl py-10 px-6">
-                    <h3 class="font-heading uppercase mb-6 text-3xl">Order Summary</h3>
+                    <h3 class="font-heading uppercase mb-6 text-3xl">Ringkasan Pesanan</h3>
                     <div class="flex justify-between flex-wrap mb-4">
-                        <p class="text-xl font-semibold">Grand Total</p>
+                        <p class="text-xl font-semibold">Total Keseluruhan</p>
                         <p class="font-semibold text-lg">
                             Rp{{ number_format($cart == null ? 0 : $total, 0, ',', '.') }},00</p>
                     </div>

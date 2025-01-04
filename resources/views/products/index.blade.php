@@ -6,9 +6,9 @@
     <section class="pt-10">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap items-center gap-6 mb-16 px-4">
-                <span class="font-semibold">Product Categories :</span>
+                <span class="font-semibold">Kategori Produk :</span>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#" class="inline-block text-sm font-semibold">All</a>
+                    <a href="#" class="inline-block text-sm font-semibold">Semua</a>
                     @foreach ($categories as $item)
                         <a href="#"
                             class="inline-block text-gray-500 text-sm hover:text-gray-900 transition duration-200">
@@ -21,7 +21,7 @@
                 <div class="w-full md:w-1/4 p-4">
                     <div class="border-l border-transparent md:border-gray-200 md:pl-6 pb-10 h-full">
                         <div class="flex justify-between items-center flex-wrap gap-2 mb-6">
-                            <span class="font-semibold">Dimensions</span>
+                            <span class="font-semibold">Dimensi</span>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                                     fill="none">
@@ -33,14 +33,14 @@
                         </div>
                         <div class="flex flex-wrap gap-4 mb-10">
                             <a href="#"
-                                class="inline-block px-7 py-1 rounded-full bg-orange-700 hover:bg-orange-800 transition duration-200">Small</a>
+                                class="inline-block px-7 py-1 rounded-full bg-orange-700 hover:bg-orange-800 transition duration-200">Kecil</a>
                             <a href="#"
-                                class="inline-block px-7 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200">Medium</a>
+                                class="inline-block px-7 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200">Sedang</a>
                             <a href="#"
-                                class="inline-block px-7 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200">Larga</a>
+                                class="inline-block px-7 py-1 rounded-full bg-gray-100 hover:bg-gray-200 transition duration-200">Besar</a>
                         </div>
                         <div class="flex justify-between items-center flex-wrap gap-2 mb-6">
-                            <span class="font-semibold">Color</span>
+                            <span class="font-semibold">Warna</span>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                                     fill="none">
@@ -56,7 +56,7 @@
                             @endforeach
                         </div>
                         <div class="flex justify-between items-center flex-wrap gap-2 mb-6">
-                            <span class="font-semibold">Brands</span>
+                            <span class="font-semibold">Merek</span>
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                                     fill="none">
@@ -124,14 +124,14 @@
                                                 Rp{{ number_format($item->price, 0, ',', '.') }},00
                                             </p>
                                         @endif
-                                        <p class="text-gray-500 text-sm font-semibold">Remaining {{ $item->stock }}</p>
+                                        <p class="text-gray-500 text-sm font-semibold">Tersisa {{ $item->stock }}</p>
                                     </div>
                                     <div>
                                         <form action="{{ route('cart.add', ['productId' => $item->id]) }}" method="POST">
                                             @csrf
                                             <button type="submit"
                                                 class="inline-block px-7 py-2 my-3 rounded-full bg-orange-700 hover:bg-orange-800 transition duration-200">
-                                                Add to cart
+                                                Tambahkan ke keranjang
                                             </button>
                                         </form>
                                     </div>

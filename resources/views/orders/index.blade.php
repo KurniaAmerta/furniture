@@ -6,9 +6,8 @@
     <section class="py-16">
         <div class="container mx-auto px-4">
             <div class="mb-10">
-                <h2 class="mb-4 font-heading text-3xl text-gray-900">Order history</h2>
-                <p class="text-sm text-gray-400 font-semibold">Check the status of recent orders, manage return orders, and
-                    discover similar products.</p>
+                <h2 class="mb-4 font-heading text-3xl text-gray-900">Histori pesanan</h2>
+                <p class="text-sm text-gray-400 font-semibold">Periksa status pesanan terbaru, kelola pengembalian pesanan, dan temukan produk serupa.</p>
             </div>
             <div class="border border-gray-50 rounded-2xl">
                 <div class="p-12">

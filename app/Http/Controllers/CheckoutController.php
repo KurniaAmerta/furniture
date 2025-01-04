@@ -83,6 +83,7 @@ class CheckoutController extends Controller
 
             // Redirect to default email client with pre-filled subject and body
             return redirect($mailtoUrl);
+            return redirect()->route('payment');
         }
 
         return redirect()->back()->with('error', 'No cart found for the user.');

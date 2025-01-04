@@ -10,7 +10,7 @@
                 <div class="flex flex-wrap items-center gap-2 mb-14">
                     <a href="{{ route('carts') }}" class="group">
                         <div class="flex flex-wrap items-center">
-                            <span class="text-xs text-gray-500 group-hover:text-gray-900 transition duration-200">Cart</span>
+                            <span class="text-xs text-gray-500 group-hover:text-gray-900 transition duration-200">Keranjang</span>
                             <div class="text-gray-500 group-hover:text-gray-900 transition duration-200">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20"
                                     fill="none">
@@ -35,12 +35,12 @@
                         </div>
                     </a>
                     <a href="{{ route('payment') }}"
-                        class="text-xs text-gray-500 hover:text-gray-900 transition duration-200">Payment</a>
+                        class="text-xs text-gray-500 hover:text-gray-900 transition duration-200">Pembayaran</a>
                 </div>
                 <div class="flex flex-wrap -m-8 xl:-m-16">
                     <div class="w-full md:w-7/12 p-8 xl:p-16">
 
-                        <h6 class="mb-4 text-lg font-semibold">1. Select shipping country</h6>
+                        <h6 class="mb-4 text-lg font-semibold">1. Pilih negara pengiriman</h6>
                         <div class="relative mb-8">
                             <select name="country_code" id="select-01-2"
                                 class="appearance-none block py-3 px-4 w-full text-sm text-gray-500 placeholder-gray-500 outline-none border border-gray-200 focus:border-gray-300 focus:ring focus:ring-gray-100 rounded-md transition duration-200">
@@ -58,11 +58,11 @@
                                     fill="#787A88"></path>
                             </svg>
                         </div>
-                        <h6 class="mb-8 text-lg font-semibold">2. Shipping address</h6>
+                        <h6 class="mb-8 text-lg font-semibold">2. Alamat pengiriman</h6>
                         <div class="flex flex-wrap -m-4 mb-2">
                             <div class="w-full p-4">
                                 <div>
-                                    <label for="input-07-1" class="mb-1.5 inline-block text-sm font-semibold">Name</label>
+                                    <label for="input-07-1" class="mb-1.5 inline-block text-sm font-semibold">Nama</label>
                                     <input id="input-07-1" name="name" type="text" value="{{ $user->name }}"
                                         class="py-3 px-4 w-full text-sm placeholder-gray-500 outline-none border border-gray-100 focus:border-gray-300 focus:ring focus:ring-gray-100 rounded-md transition duration-200"
                                         placeholder="Enter your name" disabled>
@@ -76,7 +76,7 @@
                                         placeholder="Enter your email" disabled>
                                 </div>
                                 <div>
-                                    <label for="input-02-3" class="mb-1.5 inline-block text-sm font-semibold">City</label>
+                                    <label for="input-02-3" class="mb-1.5 inline-block text-sm font-semibold">Kota</label>
                                     <input id="input-02-3" name="city" type="text" value="{{ $cart->city }}"
                                         class="py-3 px-4 w-full text-sm placeholder-gray-500 outline-none border border-gray-100 focus:border-gray-300 focus:ring focus:ring-gray-100 rounded-md transition duration-200"
                                         placeholder="Enter your city">
@@ -84,15 +84,14 @@
                             </div>
                             <div class="w-full md:w-1/2 p-4">
                                 <div class="mb-6">
-                                    <label for="input-05-1" class="mb-1.5 inline-block text-sm font-semibold">Phone
+                                    <label for="input-05-1" class="mb-1.5 inline-block text-sm font-semibold">Telpon
                                         number</label>
                                     <input id="input-05-1" name="phone" type="text" value="{{ $cart->phone }}"
                                         class="py-3 px-4 w-full text-sm placeholder-gray-500 outline-none border border-gray-100 focus:border-gray-300 focus:ring focus:ring-gray-100 rounded-md transition duration-200"
                                         placeholder="Enter your phone">
                                 </div>
                                 <div>
-                                    <label for="input-06-1" class="mb-1.5 inline-block text-sm font-semibold">ZIP
-                                        code</label>
+                                    <label for="input-06-1" class="mb-1.5 inline-block text-sm font-semibold">Kode pos</label>
                                     <input id="input-06-1" name="zip-code" type="text" value="{{ $cart->zip_code }}"
                                         class="py-3 px-4 w-full text-sm placeholder-gray-500 outline-none border border-gray-100 focus:border-gray-300 focus:ring focus:ring-gray-100 rounded-md transition duration-200"
                                         placeholder="Enter your ZIP code">
@@ -101,7 +100,7 @@
                             <div class="w-full p-4">
                                 <div>
                                     <label for="input-07-1"
-                                        class="mb-1.5 inline-block text-sm font-semibold">Address</label>
+                                        class="mb-1.5 inline-block text-sm font-semibold">Alamat</label>
                                     <input id="input-07-1" name="address" type="text" value="{{ $cart->address }}"
                                         class="py-3 px-4 w-full text-sm placeholder-gray-500 outline-none border border-gray-100 focus:border-gray-300 focus:ring focus:ring-gray-100 rounded-md transition duration-200"
                                         placeholder="Enter your address">
@@ -110,40 +109,48 @@
                         </div>
                     </div>
                     <div class="w-full md:w-5/12 p-8 xl:p-16">
-                        <h6 class="mb-4 text-lg font-semibold">Billing Address</h6>
-                        <div class="pb-6 border-b border-dashed border-gray-300">
-                            <div class="flex flex-wrap -m-2 mb-2">
-                                <div class="w-full md:w-3/4 p-2">
-                                    <div class="flex flex-wrap -m-2">
-                                        <div class="w-auto p-2">
-                                            <img class="w-24 h-24 object-cover rounded-lg"
-                                                src="{{ asset('img/furnitures/table.jpg') }}" alt="">
-                                        </div>
-                                        <div class="flex-1 p-2">
-                                            <p class="mb-1.5">Table</p>
-                                            <p class="mb-1.5">Black</p>
-                                            <p>x1</p>
+                        <h6 class="mb-4 text-lg font-semibold">Alamat Penagihan</h6>
+                        @php
+                            $totalPrice = 0;
+                        @endphp
+                        @foreach ($cartItems as $item)
+                            @php
+                                $product = $item->product();
+                                $totalPrice += $product->price_after_discount();
+                            @endphp
+                            <div class="pb-6 border-b border-dashed border-gray-300">
+                                <div class="flex flex-wrap -m-2 mb-2">
+                                    <div class="w-full md:w-3/4 p-2">
+                                        <div class="flex flex-wrap -m-2">
+                                            <div class="w-auto p-2">
+                                                <img class="w-24 h-24 object-cover rounded-lg"
+                                                    src="{{ asset('img/furnitures/table.jpg') }}" alt="">
+                                            </div>
+                                            <div class="flex-1 p-2">
+                                                <p class="mb-1.5">{{ $product->name }}</p>
+                                                <p class="mb-1.5">{{ $product->color()->name }}</p>
+                                                <p>x{{ $item->amount }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="w-full md:w-1/4 p-2">
-                                    <p class="flex justify-end font-semibold">Rp3.000.000,00</p>
+                                    <div class="w-full md:w-1/4 p-2">
+                                        <p class="flex justify-end font-semibold">Rp{{ number_format($product->price_after_discount(), 0, ',', '.') }},00</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                         <div class="pt-2.5 mb-9">
                             <div class="flex flex-wrap items-center justify-between -m-2">
                                 <div class="w-auto p-2">
-                                    <p class="font-semibold">Grand total</p>
+                                    <p class="font-semibold">Total keseluruhan</p>
                                 </div>
                                 <div class="w-auto p-2">
-                                    <p class="text-2xl font-semibold">Rp12.200.000,00</p>
+                                    <p class="text-2xl font-semibold">Rp{{ number_format($totalPrice, 0, ',', '.') }},00</p>
                                 </div>
                             </div>
                         </div>
                         <button type="submit"
-                            class="py-3 px-7 w-full text-sm text-white font-semibold bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 focus:ring-4 focus:ring-gray-200 rounded-4xl transition duration-300">Continue
-                            to payment</button>
+                            class="py-3 px-7 w-full text-sm text-white font-semibold bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 focus:ring-4 focus:ring-gray-200 rounded-4xl transition duration-300">Lanjutkan ke pembayaran</button>
                     </div>
                 </div>
             </div>

@@ -9,16 +9,16 @@
                 <div class="flex flex-col justify-center px-4 text-center h-full">
                     <div class="max-w-xl mx-auto">
                         <div class="mb-12 text-7xl">🎉</div>
-                        <span class="mb-5 inline-block text-gray-400">You have successfully ordered all items</span>
-                        <h2 class="mb-5 font-heading text-5xl text-">Thank you for the order</h2>
-                        <p class="mb-20 text-gray-400">Thank you for your purchase! We're thrilled that you chose our
-                            furniture for your home.
-                            The craftsmanship and design of our pieces are something we're really proud of, and we're
-                            delighted that you appreciate the quality and quick delivery.
-                            The elegance and comfort of our furniture will stand out even more once you start using it.
-                            Should you need any assistance, our support team is here to help. We hope you enjoy your new
-                            furniture as much as we enjoyed creating it!.</p>
-                        <p class="mb-5 text-gray-400 font-medium">Share with your friends</p>
+                        <span class="mb-5 inline-block text-gray-400">Anda telah berhasil memesan semua barang</span>
+                        <h2 class="mb-5 font-heading text-5xl text-">Terima kasih pesanan Anda</h2>
+                        <p class="mb-20 text-gray-400">Terima kasih atas pembelian Anda! Kami sangat senang Anda memilih furnitur kami untuk rumah Anda.
+
+Keahlian dan desain dari furnitur kami adalah sesuatu yang sangat kami banggakan, dan kami senang Anda menghargai kualitas serta pengiriman yang cepat.
+
+Keanggunan dan kenyamanan furnitur kami akan semakin terlihat saat Anda mulai menggunakannya. Jika Anda membutuhkan bantuan, tim dukungan kami siap membantu.
+
+Kami berharap Anda menikmati furnitur baru Anda sebagaimana kami menikmati proses pembuatannya!</p>
+                        <p class="mb-5 text-gray-400 font-medium">Bagikan dengan teman-teman Anda</p>
                         <div class="flex flex-wrap justify-center -m-2.5 mb-14">
                             <div class="w-auto p-2.5">
                                 <a href="#" class="text-gray-900 hover:text-gray-800 transition duration-200">
@@ -41,7 +41,7 @@
                                 </a>
                             </div>
                             <div class="w-auto p-2.5">
-                                <a href="#" class="text-gray-900 hover:text-gray-800 transition duration-200">
+                                <a href="{{ route('products') }}" class="text-gray-900 hover:text-gray-800 transition duration-200">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
                                         viewbox="0 0 36 36" fill="none">
                                         <path
@@ -52,68 +52,8 @@
                             </div>
                         </div>
                         <a href="#"
-                            class="bg-gray-900 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-200 text-white text-xs font-semibold px-4 h-9 inline-flex items-center transition duration-200">Visit
-                            Our Online Shop</a>
+                            class="bg-gray-900 rounded-full hover:bg-gray-800 focus:ring-4 focus:ring-gray-200 text-white text-xs font-semibold px-4 h-9 inline-flex items-center transition duration-200">Kunjungi Toko Online Kami</a>
                     </div>
-                </div>
-            </div>
-            <div class="w-full lg:max-w-md px-12 pt-16 pb-32">
-                <div class="">
-                    <h3 class="mb-24 font-heading text-3xl text-gray-900">Your Order Summary</h3>
-                    <span class="mb-4 inline-block text-xl font-semibold text-neutral-900">1 Item</span>
-                    <div class="flex flex-wrap justify-between -m-2">
-                        <div class="w-auto p-2">
-                            <span class="text-gray-400">Order Total</span>
-                        </div>
-                        <div class="w-auto p-2">
-                            <span class="font-semibold text-green-900">Rp2.580.000,00</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap justify-between -m-2">
-                        <div class="w-auto p-2">
-                            <span class="text-gray-400">Delivery</span>
-                        </div>
-                        <div class="w-auto p-2">
-                            <span class="font-semibold text-gray-900 uppercase">Free</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap justify-between -m-2">
-                        <div class="w-auto p-2">
-                            <span class="font-semibold text-neutral-900">Total Payable</span>
-                        </div>
-                        <div class="w-auto p-2">
-                            <span class="font-semibold text-green-900">Rp2.580.000,00</span>
-                        </div>
-                    </div>
-                    <span class="mb-12 inline-block text-xs text-gray-400 font-semibold">All tax included</span>
-                    <div class="flex flex-wrap justify-between -m-2">
-                        <div class="w-auto p-2">
-                            <span class="text-gray-400">Status</span>
-                        </div>
-                        <div class="w-auto p-2">
-                            <span class="font-semibold text-gray-900">Delivery</span>
-                        </div>
-                    </div>
-                    <div class="mb-12 flex flex-wrap justify-between -m-2">
-                        <div class="w-auto p-2">
-                            <span class="text-gray-400">Expected Delivery Time</span>
-                        </div>
-                        <div class="w-auto p-2">
-                            <span class="font-semibold text-gray-900">7 days</span>
-                        </div>
-                    </div>
-                    <p class="mb-6 font-semibold text-gray-900">We will deliver to</p>
-                    <div class="mb-11">
-                        <p class="text-gray-400">Dhaval Gandhi</p>
-                        <p class="text-gray-400">EB227, San Bartelomeo</p>
-                        <p class="text-gray-400">Via Verona,</p>
-                        <p class="text-gray-400">Trento - 38123</p>
-                        <p class="text-gray-400">Italy</p>
-                        <p class="text-gray-400">+39-3323232312</p>
-                    </div>
-                    <p class="mb-4 font-semibold text-gray-900">Need Support?</p>
-                    <p class="text-gray-400">info@furniture.com</p>
-                    <p class="text-gray-400">+12-23-456789</p>
                 </div>
             </div>
         </div>
