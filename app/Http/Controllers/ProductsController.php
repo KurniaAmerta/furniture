@@ -16,7 +16,7 @@ class ProductsController extends Controller
         $categories = Category::all();
         $colors = Color::all();
         $brands = Brand::all();
-        $products = Product::with('photos')->get();
+        $products = Product::with('photos')->paginate(10);
 
         return view('products.index', compact('categories', 'colors', 'brands', 'products'));
     }
