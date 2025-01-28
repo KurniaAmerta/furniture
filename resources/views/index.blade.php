@@ -3,6 +3,53 @@
 @section('title', 'Home Page')
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('css/tailwind/home/tailwind.min.css') }}">
+    <section class="relative bs-section-dragged mb-20" x-data="{ mobileNavOpen: false }">
+        <img class="absolute top-0 left-0 w-full h-full" src="{{ asset('img/furnitures/bg-color-gradient.png') }}" alt="">
+        <img class="hidden xl:block absolute bottom-0 h-full transform -translate-x-1/2 ml-20 2xl:ml-0 z-10 translate-y-32 left-3/4" src="{{ asset('img/furnitures/sofa.png') }}" alt="">
+        <img class="hidden lg:block xl:hidden absolute bottom-0 right-0 mr-12 h-full" src="vendia-assets/images/header/woman-middle-bg.png" alt="">
+        <div class="container mx-auto px-4 relative">
+            <div class="flex flex-wrap items-end">
+            <div class="w-full lg:w-auto"></div>
+            <div class="max-w-md xl:max-w-xl pt-12 md:pt-24 xl:pt-48 lg:pb-52 mb-20 lg:mb-0 mx-auto xl:mx-0">
+                <div class="relative mb-14">
+                <div class=""></div>
+                <img class="absolute top-1/2 right-1/2 md:-mr-32 h-1/2 transform -translate-y-1/2 w-1/4 md:w-auto" src="vendia-assets/images/header/smuge-yellow.svg" alt="">
+                </div>
+                <div class="max-w-sm 2xl:ml-14">
+                <h1 class="font-bold font-heading text-white text-8xl mb-3">Furniture</h1>
+                <a class="inline-block px-4 py-2 text-sm text-center font-bold text-black bg-yellow-500 hover:bg-yellow-600 transition duration-200 my-2" href="{{ route('products') }}">Buy Now</a>
+                <p class="font-medium text-white">Temukan koleksi furnitur terbaik dengan desain modern, nyaman, dan berkualitas tinggi untuk setiap sudut rumah Anda.</p>
+                </div>
+            </div>
+            </div>
+            <img class="block lg:hidden w-full max-w-md mx-auto" src="{{ asset('img/furnitures/sofa.png') }}" alt="">
+        </div>
+        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}" class="fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50 hidden">
+            <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav class="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto">
+            <div class="flex items-center mb-8">
+                <a class="mr-auto text-2xl font-medium leading-none" href="#">
+                <img class="h-6" src="vendia-assets/logos/vendia-dark.svg" alt="" width="auto">
+                </a>
+                <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg class="h-6 w-6 text-gray-500 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+                </button>
+            </div>
+            <div>
+                <ul>
+                <li class="mb-1"><a class="block p-4 font-medium text-black hover:bg-gray-50" href="#">Home</a></li>
+                <li class="mb-1"><a class="block p-4 font-medium text-black hover:bg-gray-50" href="#">Product</a></li>
+                </ul>
+            </div>
+            <div class="mt-auto">
+                <div class="pt-6"><a class="block mb-2 py-3 text-sm text-center border border-gray-200 hover:border-gray-400 font-bold" href="#">Login</a><a class="block py-3 text-sm text-center text-black bg-yellow-500 hover:bg-yellow-600 font-bold transition duration-200" href="#">Sign In</a></div>
+            </div>
+            </nav>
+        </div>
+    </section>
     <section class="py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -m-4">
@@ -57,7 +104,7 @@
                                         src="https://images.unsplash.com/photo-1603376728541-6e1906a300e6?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjQ0NjY5OTZ8&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
                                         alt="">
                                     <div class="absolute top-4 left-4">
-                                        <p class="font-semibold text-gray-500 max-w-xs">15 Produk -
+                                        <p class="font-semibold text-white max-w-xs">15 Produk -
                                             Tersedia</p>
                                     </div>
                                 </div>
@@ -70,7 +117,7 @@
                                         src="https://images.unsplash.com/photo-1506898667547-42e22a46e125?crop=entropy&amp;cs=srgb&amp;fm=jpg&amp;ixid=M3wzMzIzMzB8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjQ0NjY5OTZ8&amp;ixlib=rb-4.0.3&amp;q=85&amp;w=1920"
                                         alt="">
                                     <div class="absolute top-4 left-4">
-                                        <p class="font-semibold text-gray-500 max-w-xs">15 Produk -
+                                        <p class="font-semibold text-white max-w-xs">15 Produk -
                                             Tersedia</p>
                                     </div>
                                 </div>
