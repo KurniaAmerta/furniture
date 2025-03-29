@@ -30,6 +30,7 @@ Route::post('logout', [UserController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/products', [ProductsController::class, 'index'])->name('products');
+    Route::post('/filter-products', [ProductController::class, 'filterProducts']);
 
     Route::get('/carts', [CartsController::class, 'index'])->name('carts');
     Route::post('/cart/add/{productId}', [CartsController::class, 'addToCart'])->name('cart.add');
