@@ -123,8 +123,11 @@
                                     <div class="w-full md:w-3/4 p-2">
                                         <div class="flex flex-wrap -m-2">
                                             <div class="w-auto p-2">
+                                                @php
+                                                    $photo = $item->product()->photos->first();
+                                                @endphp
                                                 <img class="w-24 h-24 object-cover rounded-lg"
-                                                    src="{{ asset('img/furnitures/table.jpg') }}" alt="">
+                                                    src="{{ $photo ? asset('storage/' . $photo->directory) : asset('images/default-product.jpg') }}" alt="">
                                             </div>
                                             <div class="flex-1 p-2">
                                                 <p class="mb-1.5">{{ $product->name }}</p>
@@ -149,8 +152,11 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit"
-                            class="py-3 px-7 w-full text-sm text-white font-semibold bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 focus:ring-4 focus:ring-gray-200 rounded-4xl transition duration-300">Lanjutkan ke pembayaran</button>
+                        <div class="space-y-4">
+                            <div class="mt-2">
+                                <button type="submit" class="py-3 px-7 w-full text-sm text-white font-semibold bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 focus:ring-4 focus:ring-gray-200 rounded-4xl transition duration-300">Lanjutkan ke pembayaran</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

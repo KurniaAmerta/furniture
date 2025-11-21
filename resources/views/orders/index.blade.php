@@ -68,7 +68,11 @@
                                                 d="M10 19.6C15.302 19.6 19.6 15.302 19.6 10C19.6 4.69809 15.302 0.400024 10 0.400024C4.69809 0.400024 0.400024 4.69809 0.400024 10C0.400024 15.302 4.69809 19.6 10 19.6ZM14.4486 8.44855C14.9172 7.97992 14.9172 7.22013 14.4486 6.7515C13.9799 6.28287 13.2201 6.28287 12.7515 6.7515L8.80002 10.703L7.24855 9.1515C6.77992 8.68287 6.02013 8.68287 5.5515 9.1515C5.08287 9.62013 5.08287 10.3799 5.5515 10.8486L7.9515 13.2486C8.42013 13.7172 9.17992 13.7172 9.64855 13.2486L14.4486 8.44855Z"
                                                 fill="#78B449"></path>
                                         </svg>
-                                        <p class="text-sm text-gray-400">{{ $item->status }} on July 12, 2021</p>
+                                        @if ($item->status == 'delivery')
+                                            <p class="text-sm text-gray-400">{{ $item->shipping_code }} {{ $item->shipping_companny }} {{ $item->status }} on {{ $item->updated_at }}</p>
+                                        @else
+                                            <p class="text-sm text-gray-400">{{ $item->status }} on {{ $item->updated_at }}</p>
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 p-2">
@@ -80,9 +84,14 @@
                                         </div>
                                         <div class="p-2">
                                             @if ($item->status != 'success')
+                                                <button type="button" onclick="openModal('modal-example')" class="bg-gray-50 rounded-full hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 text-gray-900 text-sm font-semibold px-4 h-9 inline-flex items-center transition duration-200">Transfer Payment</button>
+                                                <button type="button" onclick="openModal('qris-example')" class="bg-gray-50 rounded-full hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 text-gray-900 text-sm font-semibold px-4 h-9 inline-flex items-center transition duration-200">Transfer QRIS</button>
                                                 <a href="{{ route('order.email', $item->id) }}"
                                                     class="bg-gray-50 rounded-full hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 text-gray-900 text-sm font-semibold px-4 h-9 inline-flex items-center transition duration-200">Send
                                                     Email</a>
+                                                <a href="{{ route('order.whatsapp', $item->id) }}"
+                                                    class="bg-gray-50 rounded-full hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 text-gray-900 text-sm font-semibold px-4 h-9 inline-flex items-center transition duration-200">Send
+                                                    WhatsApp</a>
                                             @endif
                                         </div>
                                         <div class="p-2">
@@ -105,5 +114,23 @@
                 </div>
             </div>
         </div>
+        @php
+            $footer = '<button onclick="closeModal(\'modal-example\')" class="bg-blue-500 text-white px-4 py-2 rounded">Tutup</button>';
+            $footerQris = '<button onclick="closeModal(\'qris-example\')" class="bg-blue-500 text-white px-4 py-2 rounded">Tutup</button>';
+        @endphp
+
+        <x-modal 
+            id="modal-example"
+            title="Transfer Bank BCA"
+            content="Sri indah yati - 0222377453"
+            :footer="$footer"
+        />
+
+        <x-modal 
+            id="qris-example"
+            title="QRIS"
+            content=""
+            :footer="$footerQris"
+        />
     </section>
 @endsection

@@ -28,48 +28,54 @@ class CartsController extends Controller
 
     public function addToCart(Request $request, $productId)
     {
-        $user = Auth::user();
-        $cart = session()->get('cart');
-
-        // If cart doesn't exist in session, create a new cart
-        if (!$cart) {
-            $cart = Cart::firstOrCreate(
-                ['user_id' => $user->id],
-                [
-                    'cart_code' => 'CART-' . strtoupper(uniqid()),
-                    'name' => $user->name,
-                    'phone' => $user->phone,
-                    'country_code' => 'ID', // Default or dynamic country code
-                    'city' => 'Jakarta', // Example city, you can adjust this
-                    'zip_code' => '12345', // Example zip code
-                    'address' => 'Some address', // Example address
-                ]
-            );
-            session()->put('cart', $cart);
-        }
-
         // Find the product
         $product = Product::findOrFail($productId);
 
-        // Check if the item already exists in the cart
-        $cartItem = CartItem::where('cart_id', $cart->id)
-            ->where('product_id', $productId)
-            ->first();
+        \Log::info('Storing request data', [$product->stock]);
 
-        if ($cartItem) {
-            // If the item exists, increment the amount
-            $cartItem->amount += $request->input('amount', 1);
-            $cartItem->save();
-        } else {
-            // Otherwise, create a new cart item
-            CartItem::create([
-                'cart_id' => $cart->id,
-                'product_id' => $product->id,
-                'amount' => $request->input('amount', 1),
-            ]);
+        if($product->stock > 0){
+            $user = Auth::user();
+            $cart = session()->get('cart');
+
+            // If cart doesn't exist in session, create a new cart
+            if (!$cart) {
+                $cart = Cart::firstOrCreate(
+                    ['user_id' => $user->id],
+                    [
+                        'cart_code' => 'CART-' . strtoupper(uniqid()),
+                        'name' => $user->name,
+                        'phone' => $user->phone,
+                        'country_code' => 'ID', // Default or dynamic country code
+                        'city' => 'Jakarta', // Example city, you can adjust this
+                        'zip_code' => '12345', // Example zip code
+                        'address' => 'Some address', // Example address
+                    ]
+                );
+                session()->put('cart', $cart);
+            }
+
+            // Check if the item already exists in the cart
+            $cartItem = CartItem::where('cart_id', $cart->id)
+                ->where('product_id', $productId)
+                ->first();
+
+            if ($cartItem) {
+                // If the item exists, increment the amount
+                $cartItem->amount += $request->input('amount', 1);
+                $cartItem->save();
+            } else {
+                // Otherwise, create a new cart item
+                CartItem::create([
+                    'cart_id' => $cart->id,
+                    'product_id' => $product->id,
+                    'amount' => $request->input('amount', 1),
+                ]);
+            }
+
+            return redirect()->route('products')->with('success', 'Product added to cart!');
+        }else{
+            return redirect()->route('products')->with('fail', 'Product failed added to cart!');
         }
-
-        return redirect()->back()->with('success', 'Product added to cart!');
     }
 
     public function increaseItemAmount($itemId)

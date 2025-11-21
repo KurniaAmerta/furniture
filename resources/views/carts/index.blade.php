@@ -72,13 +72,16 @@
                                 @endphp
                                 @foreach ($cartItems as $item)
                                     @php
-                                        $total = $item->product()->price_after_discount() * $item->amount;
+                                        $total += $item->product()->price_after_discount() * $item->amount;
                                     @endphp
 
                                     <tr>
                                         <td class="py-4 border-b border-gray-200 flex items-center gap-6 h-40 pr-24">
+                                            @php
+                                                $photo = $item->product()->photos->first();
+                                            @endphp
                                             <img class="rounded-2xl object-cover" style="height:130px;"
-                                                src="{{ asset('img/furnitures/table.jpg') }}" alt="">
+                                                src="{{ $photo ? asset('storage/' . $photo->directory) : asset('images/default-product.jpg') }}" alt="">
                                             <div>
                                                 <p class="text-xl font-semibold mb-2">{{ $item->product()->name }}</p>
                                                 <div class="flex items-center gap-2">

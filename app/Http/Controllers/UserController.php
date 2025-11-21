@@ -21,6 +21,10 @@ class UserController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required',
+        ], [
+            'email.required' => 'Email wajib diisi',
+            'email.email' => 'Format email tidak valid',
+            'password.required' => 'Kata sandi wajib diisi',
         ]);
 
         if (auth()->attempt($credentials)) {
@@ -28,7 +32,7 @@ class UserController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
+            'email' => 'Password atau email salah.',
         ]);
     }
 
@@ -40,12 +44,24 @@ class UserController extends Controller
     public function register(Request $request)
     {
         $this->validate($request, [
-            // 'full_name' => 'required|string|max:255',
             'name' => 'required|string|max:255',
-            // 'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            // 'phone_number' => 'required|string|max:15|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
+        ], [
+            'name.required' => 'Nama wajib diisi.',
+            'name.string' => 'Nama harus berupa teks.',
+            'name.max' => 'Nama maksimal 255 karakter.',
+
+            'email.required' => 'Email wajib diisi.',
+            'email.string' => 'Email harus berupa teks.',
+            'email.email' => 'Format email tidak valid.',
+            'email.max' => 'Email maksimal 255 karakter.',
+            'email.unique' => 'Email sudah terdaftar.',
+
+            'password.required' => 'Kata sandi wajib diisi.',
+            'password.string' => 'Kata sandi harus berupa teks.',
+            'password.min' => 'Kata sandi minimal 8 karakter.',
+            'password.confirmed' => 'Konfirmasi kata sandi tidak cocok.',
         ]);
 
         $user = User::create([

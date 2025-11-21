@@ -37,6 +37,10 @@ class CheckoutController extends Controller
             $cart->zip_code = $request->input('zip-code', $cart->zip_code); // Use existing zip code if not provided
             $cart->address = $request->input('address', $cart->address); // Use existing address if not provided
 
+            if(!$cart->address){
+                return redirect()->back()->with('fail', 'Address required.');
+            }
+
             // Save the updated cart
             $cart->save();
 
@@ -73,16 +77,16 @@ class CheckoutController extends Controller
             $body .= "Please confirm receipt of this order.";
 
             // Email recipient
-            $emailTo = "example@example.com"; // Change this to the recipient's email address
+            // $emailTo = "example@example.com"; // Change this to the recipient's email address
 
             // Mailto URL format
-            $mailtoUrl = "mailto:$emailTo?subject=" . str_replace('+', '%20', urlencode($subject)) . "&body=" . str_replace('+', '%20', urlencode($body));
+            // $mailtoUrl = "mailto:$emailTo?subject=" . str_replace('+', '%20', urlencode($subject)) . "&body=" . str_replace('+', '%20', urlencode($body));
 
             // Delete session
             session()->forget('cart');
 
             // Redirect to default email client with pre-filled subject and body
-            return redirect($mailtoUrl);
+            // return redirect($mailtoUrl);
             return redirect()->route('payment');
         }
 

@@ -48,6 +48,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/orders', [OrdersController::class, 'index'])->name('orders');
     Route::post('/order/{id}/success', [OrdersController::class, 'markAsSuccess'])->name('order.success');
     Route::get('/order/{id}/email', [OrdersController::class, 'sendEmail'])->name('order.email');
+    Route::get('/order/{id}/whatsapp', [OrdersController::class, 'sendWhatsApp'])->name('order.whatsapp');
 });
 
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');

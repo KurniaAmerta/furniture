@@ -21,4 +21,23 @@
     <script src="{{ URL::asset('js/accordion.js') }}"></script>
 </body>
 
+<script>
+    function openModal(id) {
+        document.getElementById(id).classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+        console.log("close", id);
+        document.getElementById(id).classList.add('hidden');
+    }
+
+    window.addEventListener('click', function(e) {
+        document.querySelectorAll('[id^="modal-"]').forEach(modal => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+    });
+</script>
+
 </html>

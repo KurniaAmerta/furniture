@@ -13,6 +13,6 @@ class CartItem extends Model
 
     public function product()
     {
-        return Product::find($this->product_id)->first();
+        return Product::find($this->product_id);
     }
 }

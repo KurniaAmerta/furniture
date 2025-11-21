@@ -30,13 +30,13 @@
                 @endif
                 <div class="mb-4">
                     <label for="email" class="block mb-1 text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" required autofocus
+                    <input type="email" id="email" name="email"
                         class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500" />
                 </div>
 
                 <div class="mb-4">
                     <label for="password" class="block mb-1 text-sm font-medium text-gray-700">Password</label>
-                    <input type="password" id="password" name="password" required
+                    <input type="password" id="password" name="password"
                         class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500" />
                 </div>
 

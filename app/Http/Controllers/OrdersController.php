@@ -13,7 +13,7 @@ class OrdersController extends Controller
     {
         $user = Auth::user();
         $orders = Order::join('carts', 'orders.cart_id', '=', 'carts.id')
-            ->where('carts.user_id', $user->id)->get();
+            ->where('carts.user_id', $user->id)->select('orders.*')->get();
 
         return view('orders.index', compact('orders'));
     }
@@ -71,5 +71,46 @@ class OrdersController extends Controller
 
         // Redirect to default email client with pre-filled subject and body
         return redirect($mailtoUrl);
+    }
+
+    public function sendWhatsApp($id)
+    {
+        $order = Order::find($id);
+        $cart = Cart::find($order->cart_id);
+
+        $subject = "Checkout Cart Details - Cart Code: {$cart->cart_code}";
+        $body = "*Checkout Cart Details*\n";
+        $body .= "*Cart Code:* {$cart->cart_code}\n";
+        $body .= "*Address:* {$cart->address}, {$cart->city}, {$cart->zip_code}, {$cart->country_code}\n\n";
+        $body .= "*Items:*\n";
+
+        // Add product names and prices
+        foreach ($cart->cartItems as $item) {
+            $product = $item->product();
+            if ($product) {
+                $price = number_format($product->price_after_discount(), 2);
+                $body .= "- {$product->name} (x{$item->amount}): Rp{$price} each\n";
+            }
+        }
+
+        // Add total price
+        $totalPrice = number_format($cart->total_price(), 2);
+        $body .= "\n*Total Price:* Rp {$totalPrice}\n\n";
+        $body .= "Please confirm receipt of this order.";
+
+        // WhatsApp recipient phone number (in international format, no plus sign, e.g., 628123456789)
+        $phoneNumber = "6281376475407"; // change this to recipient's phone
+
+        // Encode body for URL
+        $encodedMessage = urlencode($body);
+
+        // WhatsApp API URL
+        $whatsappUrl = "https://wa.me/{$phoneNumber}?text={$encodedMessage}";
+
+        // Delete session
+        session()->forget('cart');
+
+        // Redirect to WhatsApp
+        return redirect($whatsappUrl);
     }
 }
