@@ -17,8 +17,12 @@
                                 <div class="w-full md:flex-1 p-2">
                                     <div class="flex flex-wrap -m-3">
                                         <div class="w-full md:w-auto p-3">
+                                            @php
+                                                $firstProduct = $item->cart->cartItems->first()->product();
+                                                $photo = $firstProduct->photos->first();
+                                            @endphp
                                             <img class="rounded-2xl object-cover" style="height: 131px;"
-                                                src="{{ asset('img/furnitures/table.jpg') }}" alt="">
+                                                src="{{ $photo ? asset('storage/' . $photo->directory) : asset('images/default-product.jpg') }}" alt="">
                                         </div>
                                         <div class="w-full md:flex-1 p-3">
                                             @php
